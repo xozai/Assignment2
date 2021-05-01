@@ -7,13 +7,20 @@ you'd like to do so.
 
 
 def main():
-    """
-    You should write your code for this program in this function.
-    Make sure to delete the 'pass' line before starting to write
-    your own code. You should also delete this comment and replace
-    it with a better, more descriptive one.
-    """
-    pass
+    steps = 0
+    n = int(input("Enter a number: "))
+    while n !=1:
+        steps += 1
+        if (n%2 == 0):
+            new_n = int(n / 2)
+            print(str(n)+" is even, so I take half: "+str(new_n))
+            n = int(new_n)
+        else:
+            new_n = 3 * n + 1
+            print(str(n) + " is odd, so I take 3n+1: " + str(new_n))
+            n = int(new_n)
+    print("The process took "+str(steps)+" steps to reach "+str(n))
+
 
 
 # This provided line is required at the end of a Python file
